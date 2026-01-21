@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<button onclick="date()">Display Date</button>
+<input type="text" id="date">
+<button onclick="factorial()">Calculate Factorial</button>
+
+<script>
+function date(){
+  let today=new Date(Date.now());
+  let val=(today.getDate()+"/"+today.getMonth()+1)+"/"+today.getFullYear();
+  document.getElementById("date").value=val;
+}
+
+function factorial(){
+  let n=prompt("Enter a number to calculate its factorial:");
+  n=Number(n);
+
+  let fact=1;
+  for(let i=1;i<=n;i++){
+    fact*=i;
+  }
+
+  alert("The factorial of "+n+" is "+fact);
+}
+</script>
+
+</body>
+</html>
